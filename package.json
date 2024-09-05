@@ -1,0 +1,28 @@
+{
+  "name": "astro-copy-prod-deps",
+  "version": "1.0.0",
+  "description": "Copies only the dependencies needed in production from node_modules to the server dist directory",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrueWinter/astro-copy-prod-deps.git"
+  },
+  "keywords": [
+    "astro-integration",
+    "withastro"
+  ],
+  "author": "TrueWinter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TrueWinter/astro-copy-prod-deps/issues"
+  },
+  "homepage": "https://github.com/TrueWinter/astro-copy-prod-deps#readme",
+  "devDependencies": {
+    "@vercel/nft": "^0.27.4",
+    "astro": "^4.15.3"
+  }
+}
