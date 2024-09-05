@@ -4,6 +4,8 @@
 
 This is useful if you have a CI server building your website and don't want to run `npm install` on your production web server.
 
+![Image](https://cdn.truewinter.net/i/c6ac19.png)
+
 ## Installation
 
 ### Automatic
