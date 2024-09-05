@@ -15,9 +15,9 @@ Run `npx astro add astro-copy-prod-deps` to install the dependency.
 Modify your `astro.config.mjs` file as follows:
 
 ```js
-import astroCopyProdDeps from `astro-copy-prod-deps`;
+import copyProdDeps from `astro-copy-prod-deps`;
 
 export default defineConfig({
-  integrations: [astroCopyProdDeps()]
+  integrations: [copyProdDeps()]
 });
 ```
