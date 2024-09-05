@@ -1,6 +1,6 @@
 {
   "name": "astro-copy-prod-deps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Copies only the dependencies needed in production from node_modules to the server dist directory",
   "main": "index.js",
   "type": "module",
