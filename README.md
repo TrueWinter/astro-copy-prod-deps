@@ -1,6 +1,6 @@
 # astro-copy-prod-deps
 
-`astro-copy-prod-deps` is an Astro plugin for use with hybrid and SSR websites that copies only the dependencies needed in production from `node_modules` to the `dist/server` directory.
+`astro-copy-prod-deps` is an Astro integration for use with hybrid and SSR websites that copies only the dependencies needed in production from `node_modules` to the `dist/server` directory.
 
 This is useful if you have a CI server building your website and don't want to run `npm install` on your production web server.
 
@@ -10,7 +10,7 @@ This is useful if you have a CI server building your website and don't want to r
 
 ### Automatic
 
-Run `npx astro add astro-copy-prod-deps` to install the dependency.
+Run `npx astro add astro-copy-prod-deps` to install the integration.
 
 ### Manual
 
