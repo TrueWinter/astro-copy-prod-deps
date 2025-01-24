@@ -25,6 +25,6 @@
     "@vercel/nft": "^0.27.4"
   },
   "devDependencies": {
-    "astro": "^4.15.3"
+    "astro": "^5.1.9"
   }
 }

@@ -4,18 +4,26 @@ import { fileURLToPath } from 'url';
 import { nodeFileTrace } from '@vercel/nft';
 
 export default function () {
-  /** @type{import('astro').AstroConfig} */
+  /** @type {import('astro').AstroConfig} */
   let config;
+  let hasSsrRoutes = false;
 
-  return {
+  /** @type {import('astro').AstroIntegration} */
+  const integration = {
     name: 'copy-prod-deps',
     hooks: {
+      'astro:routes:resolved': ({ routes }) => {
+        hasSsrRoutes = routes.filter((route) => !route.isPrerendered).length !== 0;
+      },
       'astro:config:done': ({ config: _config }) => {
         config = _config;
       },
       // Using the done hook here because the manifest file doesn't exist yet when the ssr hook runs
       'astro:build:done': async ({ logger }) => {
-        if (config.output === 'static') return;
+        if (!hasSsrRoutes) {
+          logger.info('No SSR routes found');
+          return;
+        }
 
         const serverDist = fileURLToPath(config.build.server.href);
         logger.info('Server output directory: ' + serverDist);
@@ -72,5 +80,7 @@ export default function () {
         logger.info('Copied production dependencies');
       }
     }
-  }
+  };
+
+  return integration;
 }
